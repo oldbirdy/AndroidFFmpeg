@@ -1,5 +1,7 @@
 package com.demo.androidffmpeg;
 
+import android.view.Surface;
+
 /**
  * Created by 好好奋斗 on 2018/12/16.
  */
@@ -18,4 +20,8 @@ public class VedioUtils {
 
     //视频转码
     public native static String mp4Twmv(String inputStr,String outputStr);
+
+    public native static void playVedio(String inputStr, Surface surface);
+
+    public native static void playVedioNew(String inputStr, Surface surface);
 }

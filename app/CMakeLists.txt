@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.4.1)
 
 include_directories(src/main/cpp/include)
-
+include_directories(src/main/cpp/include/libyuv)
 add_library(
              native-lib
 
@@ -69,7 +69,12 @@ add_library( postproc-54
 set_target_properties( postproc-54
                        PROPERTIES IMPORTED_LOCATION
                        ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libpostproc-54.so)
-
+add_library( yuv
+             SHARED
+             IMPORTED)
+set_target_properties( yuv
+                       PROPERTIES IMPORTED_LOCATION
+                       ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libyuv.so)
 
 
 target_link_libraries( # Specifies the target library.
@@ -82,6 +87,7 @@ target_link_libraries( # Specifies the target library.
                        swresample-2
                        swscale-4
                        postproc-54
+                       yuv
                        OpenSLES
                        android
                        log

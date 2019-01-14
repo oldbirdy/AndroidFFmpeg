@@ -5,58 +5,30 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <Button
+        android:id="@+id/ffmpeg_base"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="configuration"
-            android:layout_marginRight="5dp"/>
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="center"
+        android:text="基础信息"
+        />
 
-        <TextView
-            android:id="@+id/tv2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="urlProtocolInfo"
-            android:layout_marginRight="5dp"/>
-
-        <TextView
-            android:id="@+id/tv3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="avformatInfo"
-            android:layout_marginRight="5dp"/>
-
-        <TextView
-            android:id="@+id/tv4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="avcodecInfo"
-            android:layout_marginRight="5dp"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tv5"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="avfilterInfo"
+        android:text="播放视频"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"/>
 
-
-    <ScrollView
+    <com.demo.androidffmpeg.ui.VideoView
+        android:id="@+id/vv_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/tv_test"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+        android:layout_height="match_parent"
+        />
 
-    </ScrollView>
 
 
 </LinearLayout>
